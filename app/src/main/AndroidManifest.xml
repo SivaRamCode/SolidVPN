@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.siva.vpn">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+  <application
+        android:name="com.siva.vpn.activity.Application"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app"
+        android:supportsRtl="true"
+    android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true">
+
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admobs_app_id" />
+
+
+        <activity android:name="com.siva.vpn.activity.ConnectionEditorActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.siva.vpn.activity.FragActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.siva.vpn.activity.TokenImportActivity"
+            android:exported="true"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="127.0.0.1"
+                    android:path="/securid/ctf"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="rsa.com"
+                    android:path="/android/token/ctf"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="com.rsa.securid" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="com.rsa.securid.iphone" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="*"
+                    android:mimeType="*/*"
+                    android:pathPattern=".*\\.sdtid"
+                    android:scheme="file" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.siva.vpn.handlers.FileSelect"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.siva.vpn.activity.MainActivity"
+            android:uiOptions="splitActionBarWhenNarrow"
+            tools:ignore="ExportedActivity"
+            android:configChanges="orientation"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait">
+            <intent-filter>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+
+
+
+        <activity
+            android:name="org.acra.CrashReportDialog"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <service
+            android:name="com.siva.vpn.core.OpenVpnService"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="app.openconnect.api.GrantPermissionsActivity"
+            android:permission="app.openconnect.REMOTE_API">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="app.openconnect.api.ConfirmDialog"
+            android:permission="app.openconnect.REMOTE_API">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.siva.vpn.handlers.OnBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.siva.vpn.handlers.FileProvider"
+            android:authorities="com.siva.vpn.FileProvider"
+            android:exported="true"
+            android:grantUriPermissions="true"
+            tools:ignore="ExportedContentProvider" />
+
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="Bypass Android VPN confirmation dialog" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="30" />
+
+
+        <service android:name="com.siva.vpn.notification.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_luncher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimaryDark" />
+    </application>
+
+</manifest>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+    android:id="@+id/child_ll">
+
+ <!--   <TextView android:id="@+id/tv_movies"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="@dimen/standard_text_size"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimaryDark">
+        <ImageView
+            android:id="@+id/country_flag"
+            android:layout_weight="0"
+            android:layout_width="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxHeight="24dp"
+            android:maxWidth="24dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_weight="1">
+                <TextView
+                    android:id="@+id/location_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Optimal Server"
+                    android:textColor="@color/color_white"
+                    android:fontFamily="@font/avalon_font"/>
+
+            <LinearLayout
+                android:id="@+id/ads_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_weight="0"
+                    android:layout_width="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="16dp"
+                    android:maxWidth="16dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_play" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="View this ad to get free server access!"
+                    android:textColor="@color/color_white"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/avalon_font"/>
+
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:layout_marginRight="8dp"
+                    android:src="@android:drawable/presence_online"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+        <ImageView
+            android:id="@+id/free_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_free"
+            android:layout_gravity="center" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:layout_marginRight="8dp"
+            android:src="@android:drawable/presence_online"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>

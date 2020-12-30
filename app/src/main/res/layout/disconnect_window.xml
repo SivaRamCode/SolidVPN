@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:background="@drawable/background_db">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Do you want to disconnect?                                 "
+        android:fontFamily="@font/avalon_font"
+        android:textColor="@color/color_white"
+        android:textSize="16sp" />
+
+    <FrameLayout
+        android:id="@+id/dscnt_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+       >
+
+    </FrameLayout>
+
+  <!--  <RelativeLayout
+        android:id="@+id/native_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:layout_marginRight="16dp">
+    <Button
+        android:id="@+id/btn_cncl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/avalon_font"
+        android:background="@drawable/background_db"
+        android:text="@string/no"
+        android:textColor="#FFFFFF"
+        android:layout_marginRight="8dp"/>
+
+    <Button
+        android:id="@+id/btn_dscnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/avalon_font"
+        android:background="@drawable/background_db"
+        android:text="@string/yes"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/btn_cncl" />
+
+    </LinearLayout>
+   <!-- <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dscnt"></LinearLayout>-->
+</LinearLayout>

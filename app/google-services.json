@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "649415806914",
+    "firebase_url": "https://solid-siva-vpn-default-rtdb.firebaseio.com",
+    "project_id": "solid-siva-vpn",
+    "storage_bucket": "solid-siva-vpn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649415806914:android:f4c3d111f357eaf23ed05b",
+        "android_client_info": {
+          "package_name": "com.siva.vpn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "649415806914-i2ci2e6a253c3116rpso0ibumatslvvf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAItTEQ25ONgGdqRvK6BrG5wNFgY6KR9IA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "649415806914-i2ci2e6a253c3116rpso0ibumatslvvf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649415806914:android:3e8b90ba45ae39c43ed05b",
+        "android_client_info": {
+          "package_name": "com.solid.vpn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "649415806914-i2ci2e6a253c3116rpso0ibumatslvvf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAItTEQ25ONgGdqRvK6BrG5wNFgY6KR9IA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "649415806914-i2ci2e6a253c3116rpso0ibumatslvvf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

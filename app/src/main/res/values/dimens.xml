@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="_6dp">6dp</dimen>
+    <dimen name="_8dp">8dp</dimen>
+    <dimen name="vertical">8dp</dimen>
+    <dimen name="btn_padding">12dp</dimen>
+    <dimen name="_12dp">12dp</dimen>
+    <dimen name="_16dp">16dp</dimen>
+    <dimen name="_24dp">24dp</dimen>
+    <dimen name="_36dp">36dp</dimen>
+    <dimen name="_240dp">240dp</dimen>
+</resources>

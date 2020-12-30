@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--  <dimen name="_6dp">12dp</dimen>
+    <dimen name="_8dp">16dp</dimen>
+    <dimen name="_12dp">26dp</dimen>
+    <dimen name="horizantal">8dp</dimen>
+    <dimen name="vertical">8dp</dimen>
+    <dimen name="_16dp">32dp</dimen>
+    <dimen name="_18dp">36sp</dimen>
+    <dimen name="_24dp">48dp</dimen>
+    <dimen name="_36dp">56dp</dimen>
+    <dimen name="_48dp">96dp</dimen>
+    <dimen name="_56dp">112dp</dimen>
+    <dimen name="_64dp">128dp</dimen>
+
+    <dimen name="_240dp">480dp</dimen>-->
+
+    <dimen name="_6dp">6dp</dimen>
+    <dimen name="_8dp">8dp</dimen>
+    <dimen name="vertical">26dp</dimen>
+    <dimen name="btn_padding">18dp</dimen>
+    <dimen name="_12dp">12dp</dimen>
+    <dimen name="_16dp">16dp</dimen>
+    <dimen name="_24dp">24dp</dimen>
+    <dimen name="_36dp">36dp</dimen>
+    <dimen name="_240dp">240dp</dimen>
+</resources>

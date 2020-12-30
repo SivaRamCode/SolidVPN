@@ -1,0 +1,15 @@
+<resources>
+
+    <color name="black_overlay">#707070</color>
+    <color name="colorPrimaryDark">#1b2036</color>
+    <color name="colorPrimary">#1b2036</color>
+    <color name="colorAccent">#1b2036</color>
+    <color name="my_statusbar_color">#1b2036</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_gray">#6d6f7e</color>
+    <color name="color_yellow">#FF4B55</color>
+    <color name="color_yellows">#FFDF5A</color>
+    <color name="color_maps">#0d1228</color>
+    <color name="color_btn">#7f5cfd</color>
+
+</resources>
